@@ -46,9 +46,9 @@ function App() {
   }
 
   return (
-    <div className="container" id="drum-machine">
-      <div control>
-        <h2>Drum Machine</h2>
+    <div id="drum-machine">
+      <div className="control">
+        <h2>DRUM MUCHINE</h2>
         <button className="button-on" onClick={toggleDrumMachine}>
           {isDrumMachineOn ? "TURN OFF" : "TURN ON"}
         </button>
