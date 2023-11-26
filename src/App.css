@@ -71,7 +71,8 @@ h2 {
 }
 
 input[type="range"] {
-  background-color: #e74c3c;
+  opacity: 0.3;
+  transition: opacity 1s;
 }
 
 input[type="range"]::-webkit-slider-runnable-track {
@@ -80,5 +81,15 @@ input[type="range"]::-webkit-slider-runnable-track {
 }
 
 input[type="range"]::-webkit-slider-thumb {
-  background-color: #3498db;
+  background-color: #f640c1;
+  color: #f640c1;
+}
+
+input[type="range"]::-moz-range-thumb {
+  background-color: #f640c1;
+  color: #f640c1;
+}
+
+input[type="range"]:hover {
+  opacity: 1;
 }
