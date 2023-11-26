@@ -93,3 +93,18 @@ input[type="range"]::-moz-range-thumb {
 input[type="range"]:hover {
   opacity: 1;
 }
+
+@media only screen and (max-width: 600px) {
+  .drum-pad {
+    height: 60px;
+    font-size: 18px;
+  }
+
+  .button-on {
+    font-size: 14px;
+  }
+
+  #display {
+    font-size: 14px;
+  }
+}

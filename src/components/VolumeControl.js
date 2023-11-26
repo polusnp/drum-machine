@@ -8,7 +8,7 @@ function VolumeCntrol({ globalVolume, onVolumeChange }) {
         name="globalVolume"
         min="0"
         max="1"
-        step="0.1"
+        step="0.05"
         value={globalVolume}
         onChange={onVolumeChange}
       />
