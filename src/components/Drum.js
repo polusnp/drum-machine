@@ -16,14 +16,7 @@ function Drum({ audioClip, globalVolume, setDisplaySound, isDrumMachineOn }) {
         id={`drum-${audioClip.keyTrigger}`}
         onClick={() => playSoundHandler(audioClip)}
       >
-        {!isDrumMachineOn && (
-          <audio
-            src={audioClip.url}
-            id={audioClip.keyTrigger}
-            className="clip"
-          />
-        )}
-
+        <audio src={audioClip.url} id={audioClip.keyTrigger} className="clip" />
         {audioClip.keyTrigger}
       </button>
     </div>

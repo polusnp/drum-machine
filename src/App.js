@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react"
 import Drum from "./components/Drum"
 import VolumeControl from "./components/VolumeControl"
-import "./App.css"
 import audioClips from "./data/audioClips"
+import "./App.css"
 
 function App() {
-  const [globalVolume, setGlobalVolume] = useState(0.7)
-  const [displaySound, setDisplaySound] = useState("")
+  const [globalVolume, setGlobalVolume] = useState(0.3)
+  const [displaySound, setDisplaySound] = useState("SOUND")
   const [isDrumMachineOn, setIsDrumMachineOn] = useState(false)
 
   const handleVolumeChange = (e) => {
@@ -47,10 +47,21 @@ function App() {
 
   return (
     <div className="container" id="drum-machine">
-      <h2>Drum Machine</h2>
-      <button onClick={toggleDrumMachine}>
-        {isDrumMachineOn ? "TURN OFF" : "TURN ON"}
-      </button>
+      <div control>
+        <h2>Drum Machine</h2>
+        <button className="button-on" onClick={toggleDrumMachine}>
+          {isDrumMachineOn ? "TURN OFF" : "TURN ON"}
+        </button>
+        <div id="display">{displaySound}</div>
+
+        <div className="volume-control">
+          <VolumeControl
+            globalVolume={globalVolume}
+            onVolumeChange={handleVolumeChange}
+          />
+        </div>
+      </div>
+
       <div className="whole-drum">
         {audioClips.map((clip) => (
           <Drum
@@ -61,13 +72,6 @@ function App() {
             isDrumMachineOn={isDrumMachineOn}
           />
         ))}
-        <div id="display">{displaySound}</div>
-        <div className="volume-control">
-          <VolumeControl
-            globalVolume={globalVolume}
-            onVolumeChange={handleVolumeChange}
-          />
-        </div>
       </div>
     </div>
   )

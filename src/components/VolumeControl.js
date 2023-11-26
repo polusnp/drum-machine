@@ -1,7 +1,7 @@
 function VolumeCntrol({ globalVolume, onVolumeChange }) {
   return (
     <div>
-      <label htmlFor="volume">VOLUME</label>
+      <h4>VOLUME</h4>
       <input
         type="range"
         id="globalVolume"
