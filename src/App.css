@@ -96,7 +96,7 @@ input[type="range"]:hover {
 
 @media only screen and (max-width: 600px) {
   .drum-pad {
-    height: 60px;
+    height: 40px;
     font-size: 18px;
   }
 
@@ -106,5 +106,25 @@ input[type="range"]:hover {
 
   #display {
     font-size: 14px;
+  }
+
+  .whole-drum {
+    gap: 10px;
+    margin: 0px 10px;
+  }
+
+  #drum-machine {
+    display: block;
+    padding: 10px 0px 10px 5px;
+  }
+
+  .button-on {
+    font-size: 18px;
+
+    margin: 5px auto;
+  }
+
+  .volume-control {
+    margin-bottom: 20px;
   }
 }
